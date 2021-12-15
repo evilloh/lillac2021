@@ -1,19 +1,24 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 //styles
 import styles from './Homepage.module.css';
 
 type Props = {
   image: any
   planet: string,
-  planetNumber: number
+  planetNumber: number,
+  setPickedPlanet: Function,
 }
 
 
 
-const Planet: React.FC<Props> = ({image, planet, planetNumber}) => {
-  const [selectedPlanet, setSelectedPlanet] = useState(false)
-  const [isHover, setIsHover] = useState(false)
+const Planet: React.FC<Props> = ({image, planet, planetNumber, setPickedPlanet}) => {
+  const [selectedPlanet, setSelectedPlanet] = useState<boolean>(false)
+  const [isHover, setIsHover] = useState<boolean>(false)
 
+  useEffect(() => {
+    setPickedPlanet(false)
+  }, [])
+  
   let style = {
     width: planet === "sun" ? "600px" : "250px",
     left: `${planet === "sun" ? -250 : 0 + 450*planetNumber}px`,
@@ -22,6 +27,10 @@ const Planet: React.FC<Props> = ({image, planet, planetNumber}) => {
     transition: "all 1s"
   }
 
+  const selectPlanet = () => {
+    setSelectedPlanet(true)
+    setPickedPlanet(true)
+  }
 
   return (
     <img 
@@ -30,7 +39,7 @@ const Planet: React.FC<Props> = ({image, planet, planetNumber}) => {
       className={`${selectedPlanet ? "selectedPlanet" : ""} ${isHover ? "planetHover" : ""} `} 
       onMouseEnter={() =>  setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      onClick={() => setSelectedPlanet(true)}
+      onClick={() => selectPlanet()}
       />
     )
 };
