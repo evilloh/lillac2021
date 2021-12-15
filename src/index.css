@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.planetHover {
+  animation: hoverPlanet 3s ease-in-out infinite;
+  transition: transform 1s ease-out;
+  cursor: pointer;
+}
+
+
+@keyframes selectAnimation {
+  0%   {
+    transform: scale(1);
+    ;}
+  30% {
+    transform: scale(4);
+  }
+  50% {
+    transform: scale(4);
+  }
+  100% {
+      transform: scale(20);
+      left: 45%;  
+      ;}
+}
+
+
+@keyframes hoverPlanet {
+  0%   {transform: scale(1);}
+  50%  {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+
+
+.selectedPlanet{
+  animation: selectAnimation 4s;
+  transition: transform 1s ease-out;
+  z-index: 10000;
+}
+
