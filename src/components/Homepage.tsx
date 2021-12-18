@@ -4,8 +4,8 @@ import Planet from './Planet'
 import styles from './Homepage.module.css';
 import background from '../images/map/bg_space.jpg';
 import sun from '../images/map/sun.png';
-import calvarymage from '../images//map/cloud2.png';
-import satellite from '../images//map/satellite.png';
+import calvarymage from '../images/map/cloud2.png';
+import satellite from '../images/map/satellite.png';
 import earth from '../images//map/earth.png';
 
 

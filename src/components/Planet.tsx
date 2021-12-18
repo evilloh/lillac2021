@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-//styles
-import styles from './Homepage.module.css';
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   image: any
@@ -14,6 +13,7 @@ type Props = {
 const Planet: React.FC<Props> = ({image, planet, planetNumber, setPickedPlanet}) => {
   const [selectedPlanet, setSelectedPlanet] = useState<boolean>(false)
   const [isHover, setIsHover] = useState<boolean>(false)
+  const navigate = useNavigate();
 
   useEffect(() => {
     setPickedPlanet(false)
@@ -30,6 +30,9 @@ const Planet: React.FC<Props> = ({image, planet, planetNumber, setPickedPlanet})
   const selectPlanet = () => {
     setSelectedPlanet(true)
     setPickedPlanet(true)
+    setTimeout(() => {
+      navigate("/calvary");
+    }, 4000);
   }
 
   return (
