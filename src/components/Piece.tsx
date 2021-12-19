@@ -22,7 +22,7 @@ const Piece: React.FC<Props> = ({image, typePice, setWhatPieceIsClicked, whatPie
   const [click, setClick] = useState(0)
 
 
-  const setPositions = (e):void => {
+  const setPositions = (e:any):void => {
     if (whatPieceIsClicked === "none") {
       setWhatPieceIsClicked(typePice)
       setTop(e.pageY - e.target.offsetTop)
@@ -87,6 +87,8 @@ const Piece: React.FC<Props> = ({image, typePice, setWhatPieceIsClicked, whatPie
       case "nip":
         return nip[Math.floor(Math.random()*nip.length)];
     }
+
+    return "such a great lilac"
   }
 
   const pickColor = (typePice:string):string  => {
@@ -100,6 +102,8 @@ const Piece: React.FC<Props> = ({image, typePice, setWhatPieceIsClicked, whatPie
       case "nip":
         return '#f5f3e0'
     }
+
+    return '#f5f3e0'
   }
 
   const calcImage = () => {

@@ -9,7 +9,6 @@ type Props = {
 }
 
 const Tooltip: React.FC<Props> = ({text, top, left, bgCol}) => {
-  console.log(top, left)
 
   const style = {
     tooltipContainer: {
@@ -25,8 +24,9 @@ const Tooltip: React.FC<Props> = ({text, top, left, bgCol}) => {
       backgroundColor: bgCol,
     }
   }
-  console.log(window.MouseEvent.offsetY, top, left)
+
   return (
+    // @ts-ignore "fuck CSS typings"
     <div style={style.tooltipContainer}>
       <div className={styles.tooltip2} style={style.tooltip}>
         <p >{text}</p>
