@@ -26,10 +26,18 @@ const Planet: React.FC<Props> = ({image, planet, planetNumber, setPickedPlanet})
   }
 
   const selectPlanet = () => {
+    if (planet === "sun") {
+      localStorage.removeItem('lilac')
+    }
     setSelectedPlanet(true)
     setPickedPlanet(true)
     setTimeout(() => {
-      navigate(planet === "sun" ? "/" : `/${planet}`);
+      if(planet === "sun"){
+        navigate("/");
+        window.location.reload();
+      } else {
+        navigate(`/${planet}`);
+      }
     }, 4000);
   }
 

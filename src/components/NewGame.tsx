@@ -8,25 +8,28 @@ import text3 from '../images/home/guess.png'
 import lilac from '../images/home/lilac.png'
 import lilacyear from '../images/home/2021.png'
 import Nominees from './Nominees';
+import Guess from './Guess';
 
 
 
 const NewGame: React.FC = () => {
   const [watchNominee, setwatchNominee] = useState(false)
+  const [makeaGuess, setMakeaGuess] = useState(false)
 
   return (
   <div className={styles.container}>
+    { makeaGuess ? <Guess setMakeaGuess={setMakeaGuess}/>: null}
     { watchNominee ? <Nominees setwatchNominee={setwatchNominee}/> : null}
     <div className={styles.lilacContainer}>
       <img className={styles.lilac} src={lilac} ></img>
       <img className={styles.lilacyear} src={lilacyear} ></img>
     </div>
     <div className={styles.textContainer}>
-      {/* <Link to="/home">
-      <img className={styles.text1} src={text1} ></img>
-      </Link> */}
+      <Link to="/home">
+        <img className={styles.text1} src={text1} ></img>
+      </Link>
       <img className={styles.text2} src={text2} onClick={() => setwatchNominee(true)}></img>
-      {/* <img className={styles.text3} src={text3} ></img> */}
+      <img className={styles.text3} src={text3} onClick={() => setMakeaGuess(true)}></img>
     </div>
     <img className={styles.planet} src={planet} ></img>
 

@@ -5,15 +5,19 @@ import Calvary from './components/Calvary';
 import NewGame from './components/NewGame';
 import Homepage from './components/Homepage';
 
-const App: React.FC = () => (
-  <Router>
+const lilac2021 = localStorage.getItem('lilac');
+
+const App: React.FC = () => {
+  return (
+    <Router>
     <Routes>
-      <Route path='/' element={<NewGame/>}/>
+      {lilac2021 ? <Route path='/' element={<Homepage/>}/> : <Route path='/' element={<NewGame/>}/>}
       <Route path='/home' element={<Homepage/>}/>
       <Route path='/calvary' element={<Calvary/>}/>
       <Route path='/geoguessr' element={<Calvary/>}/>
     </Routes>
   </Router>
 );
+}
 
 export default App;
