@@ -63,7 +63,9 @@ const Piece: React.FC<Props> = ({image, typePice, setWhatPieceIsClicked, whatPie
       "Shush I'm listening to music",
       "Laura1 is the best Laura",
       "SOOOMEBODY---",
-      "Bimborimbiri, bimbirimbiri!"
+      "Bimborimbiri, bimbirimbiri!",
+      "Oola peeepa ona pataaataa",
+      "These earphones are super cool, my friend there gave me them!",
     ]
     const mara = [
       "Mara maionchi",

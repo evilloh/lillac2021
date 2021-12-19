@@ -1,0 +1,79 @@
+.nomineesContainer {
+  width: 100vw;
+  height: 100vw;
+  animation: darken 3s forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+}
+
+.thumbnailsContainer{
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.thumbnailsContainer img{
+  width: 150px;
+  cursor: pointer;
+  animation: appear 2s 1s forwards;
+  opacity: 0;
+}
+
+.nomineesSelected{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  animation: appear 2s 1s forwards;
+  opacity: 0;
+  
+}
+
+.nomineesSelected h2{
+  color: whitesmoke;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.nomineesSelected p{
+  color: whitesmoke;
+  font-size: 24px;
+}
+
+.nomineesSelected img{
+  width: 300px;
+  object-fit: cover;
+}
+
+.nomineesContainer h1{
+  color: whitesmoke;
+  font-size: 32px;
+  font-weight: 700;
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+@keyframes darken {
+  0%{
+    background-color: rgba(0, 0, 0, 0);
+
+  }
+  100%{
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+
+  }
+  100%{
+    opacity: 1;
+  }
+}

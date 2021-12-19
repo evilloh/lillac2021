@@ -8,8 +8,6 @@ type Props = {
   setPickedPlanet: Function,
 }
 
-
-
 const Planet: React.FC<Props> = ({image, planet, planetNumber, setPickedPlanet}) => {
   const [selectedPlanet, setSelectedPlanet] = useState<boolean>(false)
   const [isHover, setIsHover] = useState<boolean>(false)
@@ -23,7 +21,7 @@ const Planet: React.FC<Props> = ({image, planet, planetNumber, setPickedPlanet})
     width: planet === "sun" ? "600px" : "250px",
     left: `${planet === "sun" ? -250 : 0 + 450*planetNumber}px`,
     top: `calc(50vh - ${ planet === "sun" ? 300 : 150}px )`,
-    cursor: planet === "sun" ? "inherit" : "pointer",
+    cursor: "pointer",
     transition: "all 1s"
   }
 
@@ -31,7 +29,7 @@ const Planet: React.FC<Props> = ({image, planet, planetNumber, setPickedPlanet})
     setSelectedPlanet(true)
     setPickedPlanet(true)
     setTimeout(() => {
-      navigate("/calvary");
+      navigate(planet === "sun" ? "/" : `/${planet}`);
     }, 4000);
   }
 

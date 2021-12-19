@@ -1,13 +1,18 @@
 .homepageContainer{
-  width: 100vw;
+  min-width: 100vw;
   height: 100vh;
   background-color: #00080a;
 }
 
 .spaceBackground {
+  min-width: 100vw;
+  background-color: #00080a;
+
   padding-top: 10%;
   height: 80%;
   background-image: url(../images/map/bg_space.jpg);
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 .spaceBackground img{
@@ -66,4 +71,13 @@
   25%  {transform: scale(21)}
   50%  {transform: scale(1)}
   100% {transform: scale(20)}
+}
+
+h4 {
+  font-size: 100px;
+  color: whitesmoke;
+  position: absolute;
+  left: 850px;
+  padding-right: 150px;
+  padding-top: 70px;
 }

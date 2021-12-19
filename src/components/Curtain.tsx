@@ -1,16 +1,23 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 //styles
-import styles from './Calvary.module.css';
+
+type Props = {
+  text: string,
+  color: string,
+  textColor: string,
+}
+
+const Curtain: React.FC<Props> = ({text, color, textColor}) => {
 
 
-const Curtain: React.FC = () => (
-  <div className={styles.curtain}>
+
+  return (
+    <div className={'curtain'} style={{backgroundColor: color, color: textColor}}>
     <h2>
-      You get close to the clouds, but it appears to be a place too heavenly to land.
-      You can't go to heaven yet (sinner!) but you can surely peek through the porthole!
+      {text}
     </h2>
   </div>
 );
+}
 
 export default Curtain;

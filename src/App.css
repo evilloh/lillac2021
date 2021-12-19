@@ -1,5 +1,14 @@
+body {
+  min-width: 100vw;
+  background-color: #00080a;
+  background-image: url(./images/map/bg_space.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+}
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -46,4 +55,45 @@
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+.mapLink {
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(231, 226, 226);
+  position: fixed;
+  right: 40px;
+  top: 20px
+}
+
+.mapLink:hover {
+  color: rgb(255, 253, 253);
+}
+
+.curtain {
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  animation: disappear 5s 6s forwards;
+}
+
+.curtain h2{
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 30vh;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

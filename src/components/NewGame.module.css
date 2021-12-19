@@ -1,0 +1,125 @@
+body {
+  overflow-y: hidden;
+}
+
+.container{
+  background-image:  url(../images/home/background.png);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.planet{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50vw;
+  z-index: 10;
+  animation: slideinPlanet 5s forwards;
+  opacity: 0;
+  transform: translateY(400px);
+}
+
+.lilacContainer{
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.lilac {
+  width: 400px;
+  opacity: 0;
+
+  animation: slideinTitle 3s 1s forwards;
+}
+
+.lilacyear{
+  width: 50px;
+  opacity: 0;
+
+  display: block;
+  align-self: flex-end;
+  animation: slideinTitle 3s 2s forwards;
+
+}
+
+.textContainer{
+  z-index: 30;
+  padding-top: 30vh;
+  width: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 5vw;
+}
+
+.text1 {
+  width: 250px;
+  opacity: 1;
+  margin-bottom: 20px;
+  animation: slideinbot 6s ;
+
+}
+.text2 {
+  width: 250px;
+  margin-bottom: 30px;
+  opacity: 1;
+  animation: slideinbot 7s ;
+
+}
+.text3 {
+  width: 400px;
+  animation: slideinbot 8s ;
+  opacity: 1;
+
+}
+
+.text1:hover, .text2:hover, .text3:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@keyframes slideinbot {
+  0%{
+    opacity: 0;
+    transform: translateY(400px);
+
+  }
+  80%{
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideinPlanet {
+  0%{
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  50%{
+    opacity: .2;
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideinTitle {
+  0%{
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

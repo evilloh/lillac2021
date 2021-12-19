@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Curtain from './Curtain'
 import Tooltip from './Tooltip';
 import Piece from './Piece'
-//styles
+
 import styles from './Calvary.module.css';
 
 import porthole from '../images/calvary/porthole.png';
@@ -18,23 +18,23 @@ import himg2 from '../images/calvary/2-2.png'
 import himg3 from '../images/calvary/3-2.png'
 import himg4 from '../images/calvary/4-2.png'
 
-
+const curtainText = "You get close to the clouds, but it appears to be a place too heavenly to land. You can't go to heaven yet (sinner!) but you can surely peek through the porthole!"
 
 const Calvary: React.FC = () => {
   const [whatPieceIsClicked, setWhatPieceIsClicked] = useState<string>("none")
   
   return (
     <div className={styles.calvaryContainer}>
-    {/* <Curtain ></Curtain> */}
-    <Link to="/">casa</Link>
+    <Curtain text={curtainText} color='whitesmoke' textColor='black'></Curtain>
+    <Link className="mapLink" to="/">BACK TO THE MAP</Link>
     <div className={styles.selectionsDiv}>
+    <img className={styles.clouds} src={clouds}/>
       <Piece image={[img1, himg1]} typePice={'magritte'} whatPieceIsClicked={whatPieceIsClicked} setWhatPieceIsClicked={setWhatPieceIsClicked}></Piece>
       <Piece image={[img2, himg2]} typePice={'ear'} whatPieceIsClicked={whatPieceIsClicked} setWhatPieceIsClicked={setWhatPieceIsClicked}></Piece>
       <Piece image={[img4, himg4]} typePice={'nip'} whatPieceIsClicked={whatPieceIsClicked} setWhatPieceIsClicked={setWhatPieceIsClicked}></Piece>
       <Piece image={[img3, himg3]} typePice={'mara'} whatPieceIsClicked={whatPieceIsClicked} setWhatPieceIsClicked={setWhatPieceIsClicked}></Piece>
     </div>
     <img className={styles.porthole} src={porthole}/>
-    <img className={styles.clouds} src={clouds}/>
   </div>
 );
 } 
