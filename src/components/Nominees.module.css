@@ -1,6 +1,6 @@
 .nomineesContainer {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   animation: darken 3s forwards;
   position: fixed;
   top: 0;
@@ -14,10 +14,12 @@
   justify-content: space-around;
   margin: 0 auto;
   flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .thumbnailsContainer img{
-  width: 150px;
+  width: 120px;
   cursor: pointer;
   animation: appear 2s 1s forwards;
   opacity: 0;
@@ -36,15 +38,19 @@
   color: whitesmoke;
   font-size: 32px;
   font-weight: 700;
+
 }
 
 .nomineesSelected p{
   color: whitesmoke;
-  font-size: 24px;
+  font-size: 20px;
+  height: 350px;
+  overflow-y: overlay;
+  padding-right: 40px;
 }
 
 .nomineesSelected img{
-  width: 300px;
+  width: 400px;
   object-fit: cover;
 }
 
@@ -56,6 +62,8 @@
   text-align: center;
   width: 100%;
   cursor: pointer;
+  opacity: 0;
+  animation: appear 2s 1s forwards;
 }
 
 @keyframes darken {
@@ -75,5 +83,17 @@
   }
   100%{
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nomineesSelected p{
+    color: whitesmoke;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nomineesSelected img{
+    width: 200px;
   }
 }

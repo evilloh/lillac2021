@@ -48,15 +48,17 @@ const Piece: React.FC<Props> = ({image, typePice, setWhatPieceIsClicked, whatPie
       "Carlo, I know it's you.",
       "Can you leave us alone?",
       "I'm calling the police.",
-      "Nata sama! >//<"
+      "Nata sama! >//<",
+      "I guess if there's an hentai genre for us"
     ]
     const magritte = [
-      "Why should you not fart in an apple store? Cause they dont have windows.",
-      "What is the difference between an apple and an orphan ? Apple gets picked",
-      "Apple have come up with a new revolutionary eye patch for pirates. It's called the iEye patch.",
-      "TIL a doctor who specializes in Adam’s apples is a... guyneckologist",
-      "Apple's cars will not be that popular... Because they don't support windows",
-      `Lei: "Mio figlio assomiglia tutto al padre!". L'amica: "nu poco pure a maritete!". `
+      "Who is an apple’s favourite relative? A Granny",
+      "How do you make an apple turnover? Push it downhill.",
+      "What kind of apple isn't an apple? A pineapple.",
+      "What do you call a grumpy apple? A crab apple",
+      "What did the apple say to the walnut? You're nuts.",
+      `Lei: "Mio figlio assomiglia tutto al padre!". L'amica: "nu poco pure a maritete!". `,
+      "Why did the apple go to the doctor? It wasn’t peeling well"
     ]
     const ear = [
       "Baby metal are the best",
@@ -65,7 +67,7 @@ const Piece: React.FC<Props> = ({image, typePice, setWhatPieceIsClicked, whatPie
       "SOOOMEBODY---",
       "Bimborimbiri, bimbirimbiri!",
       "Oola peeepa ona pataaataa",
-      "These earphones are super cool, my friend there gave me them!",
+      "These earphones are super cool, it's a gift from the apple guy over there!",
     ]
     const mara = [
       "Mara maionchi",

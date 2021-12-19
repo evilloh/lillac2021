@@ -22,10 +22,11 @@ const NewGame: React.FC = () => {
       <img className={styles.lilacyear} src={lilacyear} ></img>
     </div>
     <div className={styles.textContainer}>
-      <Link to="/home">
-      <img className={styles.text1} src={text1} ></img></Link>
+      {/* <Link to="/home">
+      <img className={styles.text1} src={text1} ></img>
+      </Link> */}
       <img className={styles.text2} src={text2} onClick={() => setwatchNominee(true)}></img>
-      <img className={styles.text3} src={text3} ></img>
+      {/* <img className={styles.text3} src={text3} ></img> */}
     </div>
     <img className={styles.planet} src={planet} ></img>
 
