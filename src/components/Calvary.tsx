@@ -26,7 +26,7 @@ const Calvary: React.FC = () => {
   return (
     <div className={styles.calvaryContainer}>
     <Curtain text={curtainText} color='whitesmoke' textColor='black'></Curtain>
-    <Link className="mapLink" to="/">BACK TO THE MAP</Link>
+    <Link className="mapLink" to="/home">BACK TO THE MAP</Link>
     <div className={styles.selectionsDiv}>
     <img className={styles.clouds} src={clouds}/>
       <Piece image={[img1, himg1]} typePice={'magritte'} whatPieceIsClicked={whatPieceIsClicked} setWhatPieceIsClicked={setWhatPieceIsClicked}></Piece>
