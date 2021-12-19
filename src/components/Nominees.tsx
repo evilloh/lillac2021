@@ -11,9 +11,12 @@ import prey from '../images/guess/prey.png'
 import runeterra from '../images/guess/runeterra.png'
 import zelda from '../images/guess/zelda.png'
 
+type Props = {
+  setwatchNominee : any
+}
 
 
-const Nominees: React.FC = ({setwatchNominee}) => {
+const Nominees: React.FC<Props> = ({setwatchNominee}) => {
   const [planet, setPlanet] = useState("runeterra")
 
   return (
