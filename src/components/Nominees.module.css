@@ -50,7 +50,7 @@
 .nomineesSelected p{
   color: whitesmoke;
   font-size: 20px;
-  height: 350px;
+  max-height: 350px;
   overflow-y: overlay;
   padding-right: 40px;
 }
