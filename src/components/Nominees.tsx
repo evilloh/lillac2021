@@ -145,13 +145,15 @@ const Nominees: React.FC<Props> = ({setwatchNominee}) => {
     </div>
 
     <div className={styles.nomineesSelected}>
-      <img onClick={() => setPlanet('calvary')} src={planetImage}></img>
       <div>
+      <img onClick={() => setPlanet('calvary')} src={planetImage}></img>
+      <div className={styles.nomineesText}>
         <h2>{planetTitle}</h2>
         <p>{planetText}</p>
       </div>
-    </div>
+      </div>
     <h1 onClick={() => setwatchNominee(false)}>I'm done browsing!</h1>
+    </div>
 
   </div>
 );

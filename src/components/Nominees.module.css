@@ -31,6 +31,12 @@
   display: flex;
   animation: appear 2s 1s forwards;
   opacity: 0;
+  flex-direction: column;
+  
+}
+
+.nomineesSelected > div{
+  display: flex;
   
 }
 
@@ -50,8 +56,13 @@
 }
 
 .nomineesSelected img{
-  width: 400px;
-  object-fit: cover;
+  width: 20vw;
+  object-fit: contain;
+}
+
+.nomineesText{
+  width: 55vw;
+  margin-left: 2vw;
 }
 
 .nomineesContainer h1{
@@ -62,8 +73,6 @@
   text-align: center;
   width: 100%;
   cursor: pointer;
-  opacity: 0;
-  animation: appear 2s 1s forwards;
 }
 
 @keyframes darken {
