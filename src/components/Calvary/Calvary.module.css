@@ -1,0 +1,69 @@
+.calvaryContainer{
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../../images/calvary/porthole\ background.jpg);
+}
+
+.calvaryContainer>img {
+  position: absolute;
+  top: calc(50vh - 350px);
+  left: calc(50vw - 350px);
+}
+
+.selectionsDiv {
+  z-index: 2;
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: calc(50vh - 350px);
+  left: calc(50vw - 350px);
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 6;
+}
+
+.selectionsDiv > div{
+  z-index: 2;
+  width: 350px;
+  height: 350px;
+  cursor: pointer;
+}
+
+.selectionsDiv > div:nth-child(1){
+  width: 350px;
+  height: 350px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+}
+
+.selectionsDiv > div:nth-child(2){
+  z-index: 2;
+  width: 350px;
+  height: 350px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.clouds{
+  position: absolute;
+  z-index: 4;
+  margin: 40px 0 0 40px;
+  animation: disappear 5s 11s forwards;}
+
+.porthole{
+  z-index: 5;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

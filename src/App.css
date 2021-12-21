@@ -63,7 +63,8 @@ body {
   color: rgb(231, 226, 226);
   position: fixed;
   right: 40px;
-  top: 20px
+  top: 20px;
+  z-index: 20;
 }
 
 .mapLink:hover {

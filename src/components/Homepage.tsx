@@ -18,14 +18,14 @@ const Homepage: React.FC = () => {
 
   return (
   <div className={styles.homepageContainer}>
-    <Curtain text={curtainText} color='black' textColor="whitesmoke"></Curtain>
+    {/* <Curtain text={curtainText} color='black' textColor="whitesmoke"></Curtain> */}
 
     <div className={`${styles.curtain} ${pickedPlanet ? "opacityFull" : ""}`}></div>
     <div className={styles.spaceBackground}>
       <Planet setPickedPlanet={setPickedPlanet} image={sun} planet={"sun"} planetNumber={0}></Planet>
       <Planet setPickedPlanet={setPickedPlanet} image={calvarymage} planet={"calvary"} planetNumber={1}></Planet>
-      {/* <Planet setPickedPlanet={setPickedPlanet} image={satellite} planet={"satellite"} planetNumber={2}></Planet> */}
-      {/* <Planet setPickedPlanet={setPickedPlanet} image={earth} planet={"earth"} planetNumber={3}></Planet> */}
+      <Planet setPickedPlanet={setPickedPlanet} image={earth} planet={"earth"} planetNumber={2}></Planet>
+      {/* <Planet setPickedPlanet={setPickedPlanet} image={satellite} planet={"satellite"} planetNumber={3}></Planet> */}
       <h4 className={styles.notYet} onClick={() => alert("You still have some time of travel to reach this destination!")}>?</h4>
     </div>
   </div>
