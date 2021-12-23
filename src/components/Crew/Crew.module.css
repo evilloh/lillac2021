@@ -1,0 +1,93 @@
+.crewContainer {
+  background-color: #00080a;
+  padding-top: 10%;
+  height: 100vh;
+  background-image: url(../../images/map/bg_space.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+  position: relative;
+  overflow: hidden;
+}
+
+.img1, .img2, .img3, .img4, .img51, .img52 {
+  position: absolute;
+  width: 160px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.img1 {
+  right: calc(34vw);
+}
+
+.img2{
+  right: 300px;
+  bottom: 320px;
+  width: 120px;
+}
+
+.img3{
+  left: calc(50vw - 80px);
+  bottom: 240px;
+}
+
+.img4{
+  left: calc(20vw - 80px);
+  bottom: 360px;
+}
+
+.img1:hover, .img2:hover, .img3:hover, .img4:hover, .img51:hover, .img52:hover{
+  position: absolute;
+  filter:drop-shadow(2px 2px 2px rgb(24, 24, 24));
+  transform: rotate(5deg) scale(1.2);
+  transition: .1s;
+}
+
+.img51 {
+  animation: toLeft 10s infinite;
+  width: 80px;
+  z-index: 1;
+}
+
+.img52 {
+  animation: toRight 10s infinite;
+  z-index: 10;
+  width: 320px;
+  bottom: 100px;
+}
+
+@keyframes toLeft {
+  0%{
+    left: 0;
+    visibility: visible;
+  }
+  49%{
+    visibility: visible;
+  }
+  50% {
+    left: 100vw;
+    visibility: hidden;
+  }
+  100% {
+    left: 100vw; 
+    visibility: hidden;
+  }
+}
+
+@keyframes toRight {
+  0%{
+    left: 100vw; 
+    visibility: hidden;
+  }
+  69%{
+    visibility: hidden;
+  }
+  70% {
+    visibility: visible;
+    left: 100vw
+  }
+  100% {
+    visibility: visible;
+    left: -400px
+  }
+}

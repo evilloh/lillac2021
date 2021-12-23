@@ -85,5 +85,5 @@
 .cat {
   width: 110px;
   left: calc(70vw - 100px);
-  bottom: calc(20vw - 100px);;
+  bottom: calc(20vh - 100px);;
 }
