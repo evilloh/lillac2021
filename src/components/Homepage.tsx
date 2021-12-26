@@ -57,14 +57,14 @@ const Homepage: React.FC = () => {
           setShipStatus={setShipStatus}
         />}
       {
-        (shipStatus === "hidden" || shipStatus === "visible" || shipStatus === "fixed") &&  <img 
+        (shipStatus === "hidden" || shipStatus === "visible") &&  <img 
         src={satellite} 
         style={satelliteStyle}
         onClick={() => selectSatellite()}
         />
       }
       {
-        shipStatus === "fixed1" && 
+        shipStatus === "fixed" && 
       <Planet setPickedPlanet={setPickedPlanet} image={satellite} planet={"prey"} planetNumber={3} />
       }
       </div>

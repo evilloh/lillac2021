@@ -60,3 +60,8 @@ code {
   display: block !important;
   animation: opacityFull 4s forwards;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

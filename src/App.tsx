@@ -7,6 +7,7 @@ import Homepage from './components/Homepage';
 import Earth from './components/geoguessr/Earth';
 import Prey from './components/Prey/Prey';
 import Crew from './components/Crew/Crew';
+import Outer from './components/Outer/Outer'
 
 const lilac2021 = localStorage.getItem('lilac');
 
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       <Route path='/earth' element={<Earth/>}/>
       <Route path='/crew' element={<Crew/>}/>
       <Route path='/prey' element={<Prey/>}/>
+      <Route path='/outer' element={<Outer/>}/>
     </Routes>
   </Router>
 );

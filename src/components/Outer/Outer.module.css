@@ -1,0 +1,10 @@
+.finalContainer {
+  width: 600px;
+  margin: 0 auto;
+  /* border: 1px solid white; */
+  height: 80vh;
+  background-color: #00080a;
+  margin-top: 40px;
+  color: whitesmoke;
+  padding: 40px 60px;
+}

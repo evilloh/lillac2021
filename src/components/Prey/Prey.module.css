@@ -1,0 +1,85 @@
+.preyContainer{
+  min-width: 100vw;
+  background-color: #00080a;
+  position: absolute;
+  height: 100vh;
+  background-image: url(../../images/prey/emptyRoom.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.preyContainer button{
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 60px);
+  width: 120px;
+  background-color: #3b3f3b; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.formContainer{
+  width: 500px;
+  margin: 0 auto;
+  height: 80vh;
+  margin-top: 10vh;
+  background-color: rgb(228, 228, 228);
+  position: relative;
+}
+
+.typewriterContainer{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.typewriterContainer > div {
+  min-height: 100px;
+  margin-bottom: 40px;
+}
+
+.answersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.answerContainer {
+  width: 120px;
+  margin-bottom: 20px;
+  background-color: #7c8a7c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.answerContainerSelected {
+  background-color: #3a443a; 
+}
+
+.answerContainer:hover {
+  background-color: #5c685c; 
+}
+
+.typewriterContainer input{
+  height: 40px;
+  width: 100%;
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+  padding-left: 10px;
+}
