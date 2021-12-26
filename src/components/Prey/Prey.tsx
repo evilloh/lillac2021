@@ -223,7 +223,7 @@ const Prey: React.FC = () => {
           text={texts[5]}
           typeSpeed={60}
           />
-          <button onClick={()=>{ setPage(page+1); setSelected(0)}}><Link to="/outer">Fin.</Link></button>
+          <button><Link to="/outer">Fin.</Link></button>
           </div>)
         }
       </div>
